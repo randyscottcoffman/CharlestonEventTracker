@@ -18,21 +18,21 @@ namespace Persistence
                 {
                     new AppUser
                     {
-                        DisplayName = "Bob",
-                        UserName = "bob",
-                        Email = "bob@test.com"
+                        DisplayName = "Test",
+                        UserName = "test",
+                        Email = "test@test.com"
                     },
                     new AppUser
                     {
-                        DisplayName = "Jane",
-                        UserName = "jane",
-                        Email = "jane@test.com"
+                        DisplayName = "Bill",
+                        UserName = "bill",
+                        Email = "bill@test.com"
                     },
                     new AppUser
                     {
-                        DisplayName = "Tom",
-                        UserName = "tom",
-                        Email = "tom@test.com"
+                        DisplayName = "Scott",
+                        UserName = "scott",
+                        Email = "scott@test.com"
                     },
                 };
 
@@ -49,7 +49,7 @@ namespace Persistence
                         Date = DateTime.Now.AddMonths(-2),
                         Description = "Activity 2 months ago",
                         Category = "drinks",
-                        City = "London",
+                        City = "Charleston",
                         Venue = "Pub",
                         Attendees = new List<ActivityAttendee>
                         {
@@ -66,7 +66,7 @@ namespace Persistence
                         Date = DateTime.Now.AddMonths(-1),
                         Description = "Activity 1 month ago",
                         Category = "culture",
-                        City = "Paris",
+                        City = "Charleston",
                         Venue = "The Louvre",
                         Attendees = new List<ActivityAttendee>
                         {
@@ -84,12 +84,12 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 1",
+                        Title = "Test Event 1",
                         Date = DateTime.Now.AddMonths(1),
-                        Description = "Activity 1 month in future",
+                        Description = "Test event 1 month in future",
                         Category = "music",
-                        City = "London",
-                        Venue = "Wembly Stadium",
+                        City = "Charleston",
+                        Venue = "Sullivan's Records",
                         Attendees = new List<ActivityAttendee>
                         {
                             new ActivityAttendee
@@ -106,12 +106,12 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 2",
+                        Title = "Test Event 2",
                         Date = DateTime.Now.AddMonths(2),
-                        Description = "Activity 2 months in future",
+                        Description = "test event 2 months in future",
                         Category = "food",
-                        City = "London",
-                        Venue = "Jamies Italian",
+                        City = "Charleston",
+                        Venue = "Hale House",
                         Attendees = new List<ActivityAttendee>
                         {
                             new ActivityAttendee
@@ -128,12 +128,12 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 3",
+                        Title = "Test Event 3",
                         Date = DateTime.Now.AddMonths(3),
-                        Description = "Activity 3 months in future",
+                        Description = "Test event 3 months in future",
                         Category = "drinks",
-                        City = "London",
-                        Venue = "Pub",
+                        City = "Charleston",
+                        Venue = "Sam's",
                         Attendees = new List<ActivityAttendee>
                         {
                             new ActivityAttendee
@@ -150,12 +150,12 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 4",
+                        Title = "Test Event 4",
                         Date = DateTime.Now.AddMonths(4),
-                        Description = "Activity 4 months in future",
+                        Description = "Test event 4 months in future",
                         Category = "culture",
-                        City = "London",
-                        Venue = "British Museum",
+                        City = "Charleston",
+                        Venue = "West Virginia State Museum",
                         Attendees = new List<ActivityAttendee>
                         {
                             new ActivityAttendee
@@ -167,12 +167,12 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 5",
+                        Title = "Test Event 5",
                         Date = DateTime.Now.AddMonths(5),
-                        Description = "Activity 5 months in future",
+                        Description = "Test event 5 months in future",
                         Category = "drinks",
-                        City = "London",
-                        Venue = "Punch and Judy",
+                        City = "Charleston",
+                        Venue = "Vinos",
                         Attendees = new List<ActivityAttendee>
                         {
                             new ActivityAttendee
@@ -189,70 +189,21 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 6",
+                        Title = "Test Event 6",
                         Date = DateTime.Now.AddMonths(6),
-                        Description = "Activity 6 months in future",
-                        Category = "music",
-                        City = "London",
-                        Venue = "O2 Arena",
-                        Attendees = new List<ActivityAttendee>
-                        {
-                            new ActivityAttendee
-                            {
-                                AppUser = users[2],
-                                IsHost = true                            
-                            },
-                            new ActivityAttendee
-                            {
-                                AppUser = users[1],
-                                IsHost = false                            
-                            },
-                        }
-                    },
-                    new Activity
-                    {
-                        Title = "Future Activity 7",
-                        Date = DateTime.Now.AddMonths(7),
-                        Description = "Activity 7 months in future",
+                        Description = "Test event 6 months in future",
                         Category = "travel",
-                        City = "Berlin",
-                        Venue = "All",
+                        City = "Charleston",
+                        Venue = "Hampton Inn",
                         Attendees = new List<ActivityAttendee>
                         {
-                            new ActivityAttendee
-                            {
-                                AppUser = users[0],
-                                IsHost = true                            
-                            },
-                            new ActivityAttendee
-                            {
-                                AppUser = users[2],
-                                IsHost = false                            
-                            },
-                        }
-                    },
-                    new Activity
-                    {
-                        Title = "Future Activity 8",
-                        Date = DateTime.Now.AddMonths(8),
-                        Description = "Activity 8 months in future",
-                        Category = "drinks",
-                        City = "London",
-                        Venue = "Pub",
-                        Attendees = new List<ActivityAttendee>
-                        {
-                            new ActivityAttendee
-                            {
-                                AppUser = users[2],
-                                IsHost = true                            
-                            },
                             new ActivityAttendee
                             {
                                 AppUser = users[1],
-                                IsHost = false                            
-                            },
+                                IsHost = true                            
+                            }
                         }
-                    }
+                    },
                 };
 
                 await context.Activities.AddRangeAsync(activities);

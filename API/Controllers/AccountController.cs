@@ -54,7 +54,7 @@ namespace API.Controllers
 
             if (user == null) return Unauthorized("Invalid email");
 
-            if (user.UserName == "bob") user.EmailConfirmed = true;
+            if (user.UserName == "test") user.EmailConfirmed = true;
 
             if (!user.EmailConfirmed) return Unauthorized("Email not confirmed");
 
