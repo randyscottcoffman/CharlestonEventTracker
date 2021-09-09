@@ -18,7 +18,7 @@ namespace Infrastructure.Email
             var client = new SendGridClient(_config["SendGrid:Key"]);
             var message = new SendGridMessage
             {
-                From = new EmailAddress("trycatchlearn@outlook.com", _config["Sendgrid:User"]),
+                From = new EmailAddress(_config["Sendgrid:Email"], _config["Sendgrid:User"]),
                 Subject = emailSubject,
                 PlainTextContent = msg,
                 HtmlContent = msg
